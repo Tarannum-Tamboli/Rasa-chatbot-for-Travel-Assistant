@@ -1,0 +1,55 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - flight_booking
+  - search_best_hotels
+  - search_tourist_spots
+
+actions:
+  - action_flight_booking
+  - action_best_hotels
+  - action_tourist_spots  
+
+entities:
+  - city
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+ 
+  utter_flight_booking:
+  - text: " Sure.Happy to serve you.Where you want to go??"
+
+  utter_tourist_spots:
+  - text: " Perfect, which place would you like to visit:"
+    image: "https://www.bing.com/images/search?view=detailV2&ccid=2cdTy8qZ&id=355648BE18476EC683C78F48FEE9FCD3EEE96593&thid=OIP.2cdTy8qZksDu8gmH4nIueAHaEK&mediaurl=https%3A%2F%2Fwww.jotrends.com%2Fwp-content%2Fuploads%2F2020%2F12%2Fpune.jpg&exph=675&expw=1200&q=places+to+visit+in+pune&simid=608037137646558681&form=IRPRST&ck=E4E8B600148BFE036EC7FC8E58F7244D&selectedindex=150&ajaxhist=0&ajaxserp=0&vt=0&sim=11"
+  
+  #  image: "https://www.bing.com/images/search?view=detailV2&ccid=fQYgTjCN&id=853C40AAE0EE3BAAF6C65E8CDC4769835C9514AC&thid=OIP.fQYgTjCNZpCc00_SODuP_gHaFj&mediaurl=https%3a%2f%2fwww.touristsecrets.com%2fwp-content%2fuploads%2f2019%2f06%2findia-294_1920.jpg&exph=900&expw=1200&q=places+to+mumbai&simid=608045083347333762&FORM=IRPRST&ck=8C5C8B92BA11277E75CA77D2B581E633&selectedIndex=10&ajaxhist=0&ajaxserp=0"
+  #  image: "https://www.bing.com/images/search?view=detailV2&ccid=LYHLZu85&id=F249082FCAC08983B8C915004F67C9D09174FAA4&thid=OIP.LYHLZu85vnAQM2q-LwtHtQHaEK&mediaurl=https%3a%2f%2fi.ytimg.com%2fvi%2fnSD8n8LeOXA%2fmaxresdefault.jpg&exph=720&expw=1280&q=places+to+nagpur&simid=607991757041401194&FORM=IRPRST&ck=8B5484A248429F80C8A9E4AF620C9C1D&selectedIndex=68&ajaxhist=0&ajaxserp=0"
+  
+  utter_goodbye:
+  - text: "Bye"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
